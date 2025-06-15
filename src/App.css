@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body{
+    font-family: 'Manrope', sans-serif;
+}
+.hero_image{
+    z-index:-2;
+    height: 100vh;
+}
+/* .nav{
+    position:absolute;
+    z-index: 9999;
+    background: #000;
+    width: 100vw;
+} */
