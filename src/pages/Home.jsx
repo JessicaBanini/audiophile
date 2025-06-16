@@ -136,7 +136,7 @@ function Home() {
           <button className='hover:bg-[#000000] hover:text-white cursor-pointer bg-transparent font-bold text-black p-2.5 2xl:py-4 2xl:px-12  md:px-8 mb-[4rem] border-2 border-black'>SEE PRODUCT</button>
         </div>
 
-
+        </div>
       {/* EARPHONES */}
 
 
@@ -158,7 +158,7 @@ function Home() {
           </picture>
 
 
-          <div className='bg-[#F2F2F2]  md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center '>
+          <div className='bg-[#F2F2F2]  md:w-full lg:w-1/2 2xl:w-full rounded-lg flex flex-col items-center justify-center '>
             <p className="text-black text-3xl  md:text-4xl 2xl:text-6xl font-bold px-4 mt-10 mb-4 2xl:mb-5">
               XY1 EARPHONES
             </p>
@@ -169,7 +169,7 @@ function Home() {
 
        {/* MAN */}
 
-        <div className=' flex flex-col md:flex-row-reverse lg:gap-10  mt-[2rem] md:mt-[5rem]'>
+        <div className=' flex flex-col lg:flex-row-reverse lg:gap-20  2xl:gap-40 mt-[2rem] md:mt-[5rem]'>
           <picture className=''>
             <source
               media="(min-width:1024px)"
@@ -188,7 +188,7 @@ function Home() {
 
 
           <div className=' md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center '>
-            <p className="text-black text-3xl uppercase  md:text-4xl 2xl:text-6xl font-bold mt-10 mb-4 2xl:mb-5 text-center lg:text-left">
+            <p className="text-black text-3xl lg:text-5xl uppercase  md:text-4xl 2xl:text-6xl font-bold mt-10 mb-4 2xl:mb-5 text-center lg:text-left">
               Bringing you the<span className='text-[#D87D4A]'> best </span>audio gear
             </p>
             <p className='w-full text-center lg:text-left'>
@@ -199,7 +199,7 @@ function Home() {
             </p>
             </div>
         </div>
-      </div>
+      
 
 
       
