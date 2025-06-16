@@ -38,6 +38,8 @@ function Home() {
     
   ]
   return (
+
+    // Hero
     <section className=''>
       <picture className='hero_image absolute top-0 object-cover h-[100%]'>
         <source
@@ -64,6 +66,9 @@ function Home() {
         </div>
         </div>
 
+
+        {/* Category */}
+
         <div className="flex flex-col md:flex-row gap-8 justify-center items-center my-[5rem] md:py-[2rem] lg:py-[6rem] ">
         {shop.map((item, index) => (
           <div
@@ -80,13 +85,17 @@ function Home() {
         </div>
 
 
+
+     {/* ZX SPEAKER WITH ORANGE BG */}
+
+
       <div className='cursor-default'>
-      <div className='bg-[#D87D4A] rounded-lg w-full lg:h-[32rem] 2xl:h-[39.5rem] flex justify-center items-center lg:items-start relative overflow-hidden mb-20'>
+      <div className='bg-[#D87D4A] rounded-lg w-full lg:h-[32rem] 2xl:h-[39.5rem] flex justify-center items-center lg:items-start relative overflow-hidden mb-8 md:mb-20 '>
       <img src={circlePattern} className=' absolute top-0 left-0 z-0 lg:top-[-2rem] lg:left-[-10rem]' alt="" />
           
           {/* <div className="flex flex-col lg:flex-row items-center lg:items-start mt-[5rem] lg:mt-[7rem] text-white gap-8 px-6 text-center lg:text-left"> */}
           <div className='flex flex-col lg:flex-row items-center lg:items-start mt-[5rem] lg:mt-[4rem] gap-8 px-6 text-gray-50 text-center lg:text-left '>
-          <img src={speakerThumbnail} className=' lg:ml-[-5rem] 2xl:ml-[-15rem] z-10 w-4xl md:w-md lg:w-4xl ' alt="" />
+          <img src={speakerThumbnail} className=' lg:ml-[-5rem] 2xl:ml-[-15rem] z-10 w-4xl md:w-sm lg:w-4xl ' alt="" />
 
           <div className=' h-[0%] max-w-[22rem] lg:max-w-[24rem] lg:ml-[-5rem] z-10 ' >
             <p className='font-bold text-5xl 2xl:text-6xl lg:w-1/2 md:mt-[-5rem] mt-0 lg:mt-8 2xl:mt-15 mb-8 '>ZX9 SPEAKER</p>
@@ -100,6 +109,8 @@ function Home() {
 
       </div>
       
+
+      {/* ZX7 SPEAKER */}
 
       <div className='relative  rounded-xl '>
         <picture className=''>
@@ -119,17 +130,17 @@ function Home() {
         </picture>
 
         <div className="absolute top-0 mt-[7rem] lg:mt-[5rem] 2xl:mt-[9rem] left-4 md:left-15  2xl:left-30 flex  flex-col items-center justify-center text-white ">
-          <p className="text-black  md:text-4xl 2xl:text-6xl font-bold px-4 py-2  mb-2 2xl:mb-5">
+          <p className="text-black  text-3xl md:text-4xl 2xl:text-6xl font-bold px-4 py-2  mb-2 2xl:mb-5">
             ZX7 SPEAKER
           </p>
-          <button className='hover:bg-[#000000] hover:text-white cursor-pointer bg-transparent font-bold text-black py-2.5 2xl:py-4 2xl:px-12 px-8 mb-[4rem] border-2 border-black'>SEE PRODUCT</button>
+          <button className='hover:bg-[#000000] hover:text-white cursor-pointer bg-transparent font-bold text-black p-2.5 2xl:py-4 2xl:px-12  md:px-8 mb-[4rem] border-2 border-black'>SEE PRODUCT</button>
         </div>
 
 
+      {/* EARPHONES */}
 
 
-
-        <div className=' flex flex-col md:flex-row  gap-5 mt-[5rem]'>
+        <div className=' flex flex-col md:flex-row  gap-5 mt-[2rem] md:mt-[5rem]'>
           <picture className=''>
             <source
               media="(min-width:1024px)"
@@ -156,8 +167,9 @@ function Home() {
         </div>
       
 
+       {/* MAN */}
 
-        <div className=' flex flex-col md:flex-row-reverse lg:gap-10 mt-[5rem]'>
+        <div className=' flex flex-col md:flex-row-reverse lg:gap-10  mt-[2rem] md:mt-[5rem]'>
           <picture className=''>
             <source
               media="(min-width:1024px)"
@@ -176,10 +188,10 @@ function Home() {
 
 
           <div className=' md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center '>
-            <p className="text-black text-3xl uppercase  md:text-4xl 2xl:text-6xl font-bold mt-10 mb-4 2xl:mb-5 text-center">
+            <p className="text-black text-3xl uppercase  md:text-4xl 2xl:text-6xl font-bold mt-10 mb-4 2xl:mb-5 text-center lg:text-left">
               Bringing you the<span className='text-[#D87D4A]'> best </span>audio gear
             </p>
-            <p className='w-full text-center'>
+            <p className='w-full text-center lg:text-left'>
               Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and 
               audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and 
               experience a wide range of our products. Stop by our store to meet some of the fantastic people who make 
