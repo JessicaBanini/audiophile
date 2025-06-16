@@ -13,6 +13,11 @@ import desktopspeaker from '../assets/home/desktop/image-speaker-zx7.jpg'
 import tabletspeaker from '../assets/home/tablet/image-speaker-zx7.jpg'
 import mobilespeaker from '../assets/home/mobile/image-speaker-zx7.jpg'
 
+import desktopearphones from '../assets/home/desktop/image-earphones-yx1.jpg'
+import tabletearphones from '../assets/home/tablet/image-earphones-yx1.jpg'
+import mobileearphones from '../assets/home/mobile/image-earphones-yx1.jpg'
+
+
 function Home() {
   const shop = [
     {
@@ -117,7 +122,32 @@ function Home() {
           <button className='hover:bg-[#000000] hover:text-white cursor-pointer bg-transparent font-bold text-black py-2.5 2xl:py-4 2xl:px-12 px-8 mb-[4rem] border-2 border-black'>SEE PRODUCT</button>
         </div>
 
-        
+        <div className=' flex flex-col md:flex-row  gap-5 mt-[5rem]'>
+          <picture className=''>
+            <source
+              media="(min-width:1024px)"
+              srcSet={desktopearphones}
+            />
+            <source
+              media="(min-width:768px)"
+              srcSet={tabletearphones}
+            />
+            <img
+              src={mobileearphones}
+              alt="Hero"
+              className="w-full object-cover rounded-lg"
+            />
+          </picture>
+
+          <div className='bg-[#F2F2F2]  md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center '>
+          <p className="text-black text-3xl  md:text-4xl 2xl:text-6xl font-bold px-4 mt-10 mb-4 2xl:mb-5">
+            XY1 EARPHONES
+          </p>
+          <button className='hover:bg-[#000000] hover:text-white cursor-pointer bg-transparent font-bold text-black py-2.5 2xl:py-4 2xl:px-12 px-8 mb-[4rem] border-2 border-black'>SEE PRODUCT</button>
+
+          </div>
+         
+        </div>
 
       </div>
 
