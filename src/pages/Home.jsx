@@ -17,6 +17,9 @@ import desktopearphones from '../assets/home/desktop/image-earphones-yx1.jpg'
 import tabletearphones from '../assets/home/tablet/image-earphones-yx1.jpg'
 import mobileearphones from '../assets/home/mobile/image-earphones-yx1.jpg'
 
+import desktopman from '../assets/shared/desktop/image-best-gear.jpg'
+import tabletman from '../assets/shared/tablet/image-best-gear.jpg'
+import mobileman from '../assets/shared/mobile/image-best-gear.jpg'
 
 function Home() {
   const shop = [
@@ -48,7 +51,7 @@ function Home() {
         <img
           src={mobileHero}
           alt="Hero"
-          className="w-full object-cover"
+          className="w-full object-cover "
         />
       </picture>
       <section  className=' px-[24px] md:px-[39px] lg:px-[165px]'>
@@ -83,11 +86,11 @@ function Home() {
           
           {/* <div className="flex flex-col lg:flex-row items-center lg:items-start mt-[5rem] lg:mt-[7rem] text-white gap-8 px-6 text-center lg:text-left"> */}
           <div className='flex flex-col lg:flex-row items-center lg:items-start mt-[5rem] lg:mt-[4rem] gap-8 px-6 text-gray-50 text-center lg:text-left '>
-          <img src={speakerThumbnail} className=' lg:ml-[-5rem] 2xl:ml-[-15rem] z-10 w-4xl 2xl:w-4xl ' alt="" />
+          <img src={speakerThumbnail} className=' lg:ml-[-5rem] 2xl:ml-[-15rem] z-10 w-4xl md:w-md lg:w-4xl ' alt="" />
 
           <div className=' h-[0%] max-w-[22rem] lg:max-w-[24rem] lg:ml-[-5rem] z-10 ' >
-            <p className='font-bold text-5xl 2xl:text-6xl lg:w-1/2 mt-0 lg:mt-8 2xl:mt-15 mb-8 '>ZX9 SPEAKER</p>
-            <p className=' lg:w-full  2xl:text-lg mb-8'>
+            <p className='font-bold text-5xl 2xl:text-6xl lg:w-1/2 md:mt-[-5rem] mt-0 lg:mt-8 2xl:mt-15 mb-8 '>ZX9 SPEAKER</p>
+            <p className=' md: text-lg lg:w-full  2xl:text-lg mb-8'>
               Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
             </p>
             <button className='hover:bg-[#979797] cursor-pointer bg-[#000000] font-bold text-gray-50 py-2.5 2xl:py-4 px-8 mb-[4rem]'>SEE PRODUCT</button>
@@ -122,6 +125,10 @@ function Home() {
           <button className='hover:bg-[#000000] hover:text-white cursor-pointer bg-transparent font-bold text-black py-2.5 2xl:py-4 2xl:px-12 px-8 mb-[4rem] border-2 border-black'>SEE PRODUCT</button>
         </div>
 
+
+
+
+
         <div className=' flex flex-col md:flex-row  gap-5 mt-[5rem]'>
           <picture className=''>
             <source
@@ -139,17 +146,53 @@ function Home() {
             />
           </picture>
 
+
           <div className='bg-[#F2F2F2]  md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center '>
-          <p className="text-black text-3xl  md:text-4xl 2xl:text-6xl font-bold px-4 mt-10 mb-4 2xl:mb-5">
-            XY1 EARPHONES
-          </p>
-          <button className='hover:bg-[#000000] hover:text-white cursor-pointer bg-transparent font-bold text-black py-2.5 2xl:py-4 2xl:px-12 px-8 mb-[4rem] border-2 border-black'>SEE PRODUCT</button>
-
+            <p className="text-black text-3xl  md:text-4xl 2xl:text-6xl font-bold px-4 mt-10 mb-4 2xl:mb-5">
+              XY1 EARPHONES
+            </p>
+            <button className='hover:bg-[#000000] hover:text-white cursor-pointer bg-transparent font-bold text-black py-2.5 2xl:py-4 2xl:px-12 px-8 mb-[4rem] border-2 border-black'>SEE PRODUCT</button>
           </div>
-         
         </div>
+      
 
+
+        <div className=' flex flex-col md:flex-row-reverse lg:gap-10 mt-[5rem]'>
+          <picture className=''>
+            <source
+              media="(min-width:1024px)"
+              srcSet={desktopman}
+            />
+            <source
+              media="(min-width:768px)"
+              srcSet={tabletman}
+            />
+            <img
+              src={mobileman}
+              alt="Hero"
+              className="w-full object-cover rounded-lg"
+            />
+          </picture>
+
+
+          <div className=' md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center '>
+            <p className="text-black text-3xl uppercase  md:text-4xl 2xl:text-6xl font-bold mt-10 mb-4 2xl:mb-5 text-center">
+              Bringing you the<span className='text-[#D87D4A]'> best </span>audio gear
+            </p>
+            <p className='w-full text-center'>
+              Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and 
+              audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and 
+              experience a wide range of our products. Stop by our store to meet some of the fantastic people who make 
+              Audiophile the best place to buy your portable audio equipment.
+            </p>
+            </div>
+        </div>
       </div>
+
+
+      
+      
+
 
 
       </section>
