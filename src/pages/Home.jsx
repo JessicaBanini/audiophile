@@ -62,7 +62,7 @@ function Home() {
           <p className='text-[#979797] text-sm  mb-8 tracking-[10px]'>NEW PRODUCT</p>
           <p className='text-gray-50 font-bold text-5xl md:text-6xl lg:w-[50%] md:w-[55%] 2xl:text-8xl 2xl:mb-8 mb-5'>XX99 MARK II HEADPHONES</p>
           <p className='text-[#979797] font-medium text-lg lg:[50%] md:w-[55%] 2xl:text-xl 2xl:mb-8 mb-5'>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-          <button className='bg-[#D87D4A] font-bold text-gray-50 py-2.5 lg:py-4 px-8'>SEE PRODUCT</button>
+          <button className='hover:bg-[#FBAF85] active:bg-[#D87D4A] bg-[#D87D4A] font-bold text-gray-50 py-2.5 lg:py-4 px-8'>SEE PRODUCT</button>
         </div>
         </div>
 
@@ -78,7 +78,7 @@ function Home() {
             <img src={item.image} alt={item.itemName} className="absolute z-5 top-5.5 w-[15rem] md:w-[20rem] " />
             <div className='bg-[#f1f1f1] rounded-lg w-full h-[12rem] md:h-[11rem] lg:h-[15rem] mt-[8rem] flex flex-col justify-end text-center  pb-8'>
             <h2 className="text-lg font-bold uppercase">{item.itemName}</h2>
-            <button className="mt-2 text-[#d87d4a] tracking-widest text-sm">SHOP &rarr;</button>
+            <button className="mt-2 text-[#979797] tracking-widest text-sm">SHOP <span className='text-[#D87D4A]'>&rarr;</span></button>
             </div>
           </div>
         ))}
