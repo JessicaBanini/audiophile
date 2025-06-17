@@ -2,7 +2,7 @@ Technical Assessment – E-commerce Website
 
 ## Overview
 
-This is my submission for the Software Development Pathway Assessment – Frontend Developer Challenge. The project is a multi-page, responsive e-commerce website built based on the provided design specifications.
+This is my submission for the Software Development Technical Assessment. The project is a multi-page, responsive e-commerce website built based on the provided design specifications.
 
 Currently, the **homepage is fully implemented**, with responsive layout and basic styling. The remaining pages and cart functionalities are a work in progress and will be completed soon.
 
