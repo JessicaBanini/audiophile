@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 import mobileHero from '../assets/home/mobile/image-header.jpg'
 import tabletHero from '../assets/home/tablet/image-header.jpg'
 import desktopHero from '../assets/home/desktop/image-hero.jpg' 
@@ -78,7 +80,9 @@ function Home() {
             <img src={item.image} alt={item.itemName} className="absolute z-5 top-5.5 w-[15rem] md:w-[20rem] " />
             <div className='bg-[#f1f1f1] rounded-lg w-full h-[12rem] md:h-[11rem] lg:h-[15rem] mt-[8rem] flex flex-col justify-end text-center  pb-8'>
             <h2 className="text-lg font-bold uppercase">{item.itemName}</h2>
+            <Link to={`/${item.itemName.toLowerCase()}`}>
             <button className="mt-2 text-[#979797] tracking-widest text-sm">SHOP <span className='text-[#D87D4A]'>&rarr;</span></button>
+            </Link>     
             </div>
           </div>
         ))}
