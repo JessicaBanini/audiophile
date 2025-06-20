@@ -18,7 +18,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-         <Route path="/headphones" element={<Headphones/>} />
+         <Route path="/headphones" element={<Headphones />} />
          <Route path="/speakers" element={<Speakers />} />
       </Routes>
       <Footer/>
