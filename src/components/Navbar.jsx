@@ -78,7 +78,7 @@ function Navbar() {
                   <img src={item.image} alt={item.itemName} className="absolute z-5 top-5.5 w-[12rem] md:w-[12rem] " />
                   <div className='bg-[#f1f1f1] rounded-lg w-full h-[11rem]   mt-[6rem]  flex flex-col justify-end text-center pb-8'>
                   <h2 className="text-lg font-bold uppercase text-black">{item.itemName}</h2>
-                  <Link to={`/${item.itemName.toLowerCase()}`}>
+                  <Link to={`/${item.itemName.toLowerCase()}`}  onClick={closeMenu}>
                   <button className="mt-2 text-[#979797] tracking-widest text-sm">SHOP <span className='text-[#D87D4A]'>&rarr;</span></button>
                   </Link>
                   </div>

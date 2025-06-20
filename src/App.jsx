@@ -20,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
          <Route path="/headphones" element={<Headphones />} />
          <Route path="/speakers" element={<Speakers />} />
+         <Route path="/earphones" element={<Earphones />} />
       </Routes>
       <Footer/>
     </Router>

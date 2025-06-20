@@ -14,7 +14,7 @@ import mobileman from '../../assets/shared/mobile/image-best-gear.jpg'
 // import mark_I from "./assets/product-xx99-mark-one-headphones/tablet/image-product.jpg"
 
 
-function Headphones() {
+function Earphones() {
 
   const shop = [
     {
@@ -31,7 +31,7 @@ function Headphones() {
     },
     
   ]
-  const productIds = [4, 3, 2]; 
+  const productIds = [1]; 
 
   // Find all products with matching IDs
   const selectedProducts = productIds.map((id) => productData.find((item) => item.id === id));
@@ -40,7 +40,7 @@ function Headphones() {
     <section className="">
       {/* Background Header */}
       <div className="bg-black absolute top-0 object-cover -z-8 w-full h-[35%] md:h-[25%] lg:h-[45%] 2xl:h-[30%] text-white text-3xl lg:text-6xl md:text-5xl font-semibold">
-        <p className="flex justify-center items-center lg:pt-[10rem] pt-[8.5rem] md:pt-[9.5rem]">HEADPHONES</p>
+        <p className="flex justify-center items-center lg:pt-[10rem] pt-[8.5rem] md:pt-[9.5rem]">EARPHONES</p>
       </div>
 
       {/* Product List Section */}
@@ -85,7 +85,7 @@ function Headphones() {
 
           <div className=' md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center '>
           {isNew && (
-                  <p className=" text-[#D87D4A] uppercase font-bold text-sm mb-1 tracking-[15px] text-center lg:text-left">New Product</p>
+                  <p className=" text-[#D87D4A] uppercase font-bold text-sm mb-1 tracking-[15px] text-center lg:text-left lg:self-start">New Product</p>
                 )}
             <p className="text-black text-3xl md:text-5xl uppercase md:w-1/2 lg:w-full 2xl:text-6xl font-bold mt-5 mb-4 2xl:mb-5 text-center lg:text-left  ">
             {name}
@@ -167,4 +167,4 @@ function Headphones() {
   );
 }
 
-export default Headphones;
+export default Earphones;

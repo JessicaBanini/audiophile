@@ -85,7 +85,7 @@ function Headphones() {
 
           <div className=' md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center '>
           {isNew && (
-                  <p className=" text-[#D87D4A] uppercase font-bold text-sm mb-1 tracking-[15px] text-center lg:text-left">New Product</p>
+                  <p className=" text-[#D87D4A] uppercase font-bold text-sm mb-1 tracking-[15px] text-center lg:text-left lg:self-start">New Product</p>
                 )}
             <p className="text-black text-3xl md:text-5xl uppercase md:w-1/2 lg:w-full 2xl:text-6xl font-bold mt-5 mb-4 2xl:mb-5 text-center lg:text-left  ">
             {name}

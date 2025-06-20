@@ -17,9 +17,9 @@ function Footer() {
         <div>
             <ul className=" flex flex-col md:flex-row gap-6 text-[#FFFFFF] font-bold text-center">
                 <li><Link to="/" className="hover:text-[#FBAF85] active:text-[#D87D4A]">HOME</Link></li>
-                <li><Link to="/" className="hover:text-[#FBAF85] active:text-[#D87D4A]">HEADPHONES</Link></li>
-                <li><Link to="/contact" className="hover:text-[#FBAF85] active:text-[#D87D4A]">SPEAKERS</Link></li>
-                <li><Link to="/contact" className="hover:text-[#FBAF85] active:text-[#D87D4A]">EARPHONES</Link></li>
+                <li><Link to="/headphones" className="hover:text-[#FBAF85] active:text-[#D87D4A]">HEADPHONES</Link></li>
+                <li><Link to="/speakers" className="hover:text-[#FBAF85] active:text-[#D87D4A]">SPEAKERS</Link></li>
+                <li><Link to="/earphones" className="hover:text-[#FBAF85] active:text-[#D87D4A]">EARPHONES</Link></li>
             </ul>
         </div>
         </div>
