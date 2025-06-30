@@ -44,7 +44,7 @@ function Speakers() {
       </div>
 
       {/* Product List Section */}
-      <div className=" px-[24px] md:px-[39px] lg:px-[165px] mt-[8rem] 2xl:mt-[20rem]">
+      <div className=" px-[24px] md:px-[39px] lg:px-[165px] mt-[8rem] 2xl:mt-[15rem]">
         {selectedProducts.map((product, index) => {
           if (!product) {
             return null; // Skip if product is not found
@@ -56,7 +56,7 @@ function Speakers() {
           const isReversed = index === 1; // Index 1 is the middle product
 
           return (
-            <section  className='pt-20'>
+            <section  className='pt-15'>
             <div
               key={id}
               className={`flex flex-col mt-[2rem] md:mt-[5rem] ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-20`}
@@ -83,17 +83,17 @@ function Speakers() {
 
           
 
-          <div className=' md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center '>
+          <div className=' md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center cursor-default'>
           {isNew && (
-                  <p className=" text-[#D87D4A] uppercase font-bold text-sm mb-1 tracking-[15px] text-center lg:text-left lg:self-start">New Product</p>
+                  <p className=" text-[#D87D4A] uppercase font-bold text-sm mb-1 tracking-[8px] lg:tracking-[15px] text-center lg:text-left lg:self-start">New Product</p>
                 )}
-            <p className="text-black text-3xl md:text-5xl uppercase md:w-1/2 lg:w-full 2xl:text-6xl font-bold mt-5 mb-4 2xl:mb-5 text-center lg:text-left  ">
+            <p className="text-black text-3xl md:text-5xl uppercase md:w-1/2 lg:w-full 2xl:text-6xl font-bold mt-4 mb-4 2xl:mb-5 text-center lg:text-left  ">
             {name}
             </p>
             <p className='w-full text-center lg:text-left md:text-lg text-[#979797]'>
             {description}
             </p>
-            <button className='hover:bg-[#FBAF85] active:bg-[#D87D4A] bg-[#D87D4A] font-bold mt-8 text-gray-50 py-2.5 lg:py-4 px-8'>SEE PRODUCT</button>
+            <button className='hover:bg-[#FBAF85] active:bg-[#D87D4A] bg-[#D87D4A] font-bold mt-8 text-gray-50 py-2.5 lg:py-4 px-8 cursor-pointer self-center lg:self-start'>SEE PRODUCT</button>
 
             </div>
         </div>
@@ -106,7 +106,7 @@ function Speakers() {
         })}
         {/* Category */}
 
-      <div className="flex flex-col md:flex-row gap-8 justify-center items-center my-[5rem] md:py-[2rem] lg:py-[6rem] ">
+      <div className="flex flex-col md:flex-row gap-8 justify-center items-center my-[5rem] md:py-[2rem] lg:py-[6rem] cursor-default ">
         {shop.map((item, index) => (
           <div
             key={index}  
@@ -115,8 +115,8 @@ function Speakers() {
             <img src={item.image} alt={item.itemName} className="absolute z-5 top-5.5 w-[15rem] md:w-[20rem] " />
             <div className='bg-[#f1f1f1] rounded-lg w-full h-[12rem] md:h-[11rem] lg:h-[15rem] mt-[8rem] flex flex-col justify-end text-center  pb-8'>
             <h2 className="text-lg font-bold uppercase">{item.itemName}</h2>
-            <Link to={`/${item.itemName.toLowerCase()}`}>
-            <button className="mt-2 text-[#979797] tracking-widest text-sm">SHOP <span className='text-[#D87D4A]'>&rarr;</span></button>
+            <Link to={`/${item.itemName.toLowerCase()}`} classsname='cursor-pointer'>
+            <button className="mt-2 text-[#979797] tracking-widest text-sm cursor-pointer">SHOP <span className='text-[#D87D4A]'>&rarr;</span></button>
             </Link>     
             </div>
           </div>
@@ -144,7 +144,7 @@ function Speakers() {
           </picture>
 
 
-          <div className=' md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center '>
+          <div className=' md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center cursor-default'>
             <p className="text-black text-3xl lg:text-5xl uppercase  md:text-4xl 2xl:text-6xl font-bold mt-10 mb-4 2xl:mb-5 text-center lg:text-left">
               Bringing you the<span className='text-[#D87D4A]'> best </span>audio gear
             </p>

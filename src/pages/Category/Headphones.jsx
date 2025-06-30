@@ -37,14 +37,14 @@ function Headphones() {
   const selectedProducts = productIds.map((id) => productData.find((item) => item.id === id));
 
   return (
-    <section className="">
+    <section className="cursor-default">
       {/* Background Header */}
       <div className="bg-black absolute top-0 object-cover -z-8 w-full h-[35%] md:h-[25%] lg:h-[45%] 2xl:h-[30%] text-white text-3xl lg:text-6xl md:text-5xl font-semibold">
         <p className="flex justify-center items-center lg:pt-[10rem] pt-[8.5rem] md:pt-[9.5rem]">HEADPHONES</p>
       </div>
 
       {/* Product List Section */}
-      <div className=" px-[24px] md:px-[39px] lg:px-[165px] mt-[8rem] 2xl:mt-[20rem]">
+      <div className=" px-[24px] md:px-[39px] lg:px-[165px] mt-[8rem] 2xl:mt-[15rem]">
         {selectedProducts.map((product, index) => {
           if (!product) {
             return null; // Skip if product is not found
@@ -93,7 +93,10 @@ function Headphones() {
             <p className='w-full text-center lg:text-left md:text-lg text-[#979797]'>
             {description}
             </p>
-            <button className='hover:bg-[#FBAF85] active:bg-[#D87D4A] bg-[#D87D4A] font-bold mt-8 text-gray-50 py-2.5 lg:py-4 px-8'>SEE PRODUCT</button>
+
+            <Link to={`/${product.slug}`} className='self-center lg:self-start'>
+            <button className='hover:bg-[#FBAF85] active:bg-[#D87D4A] bg-[#D87D4A] font-bold mt-8 text-gray-50 py-2.5 lg:py-4 px-8 cursor-pointer '>SEE PRODUCT</button>
+            </Link>
 
             </div>
         </div>
@@ -115,8 +118,8 @@ function Headphones() {
             <img src={item.image} alt={item.itemName} className="absolute z-5 top-5.5 w-[15rem] md:w-[20rem] " />
             <div className='bg-[#f1f1f1] rounded-lg w-full h-[12rem] md:h-[11rem] lg:h-[15rem] mt-[8rem] flex flex-col justify-end text-center  pb-8'>
             <h2 className="text-lg font-bold uppercase">{item.itemName}</h2>
-            <Link to={`/${item.itemName.toLowerCase()}`}>
-            <button className="mt-2 text-[#979797] tracking-widest text-sm">SHOP <span className='text-[#D87D4A]'>&rarr;</span></button>
+            <Link to={`/${item.itemName.toLowerCase()}`}classsname='cursor-pointer'  >
+            <button className="mt-2 text-[#979797] tracking-widest text-sm cursor-pointer">SHOP <span className='text-[#D87D4A]'>&rarr;</span></button>
             </Link>     
             </div>
           </div>

@@ -44,7 +44,7 @@ function Earphones() {
       </div>
 
       {/* Product List Section */}
-      <div className=" px-[24px] md:px-[39px] lg:px-[165px] mt-[8rem] 2xl:mt-[20rem]">
+      <div className=" px-[24px] md:px-[39px] lg:px-[165px] mt-[8rem] 2xl:mt-[15rem]">
         {selectedProducts.map((product, index) => {
           if (!product) {
             return null; // Skip if product is not found
@@ -83,9 +83,9 @@ function Earphones() {
 
           
 
-          <div className=' md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center '>
+          <div className=' md:w-full lg:w-1/2 rounded-lg flex flex-col items-center justify-center cursor-default'>
           {isNew && (
-                  <p className=" text-[#D87D4A] uppercase font-bold text-sm mb-1 tracking-[15px] text-center lg:text-left lg:self-start">New Product</p>
+                  <p className=" text-[#D87D4A] uppercase font-bold text-sm mb-1 tracking-[8px] lg:tracking-[15px] text-center lg:text-left lg:self-start">New Product</p>
                 )}
             <p className="text-black text-3xl md:text-5xl uppercase md:w-1/2 lg:w-full 2xl:text-6xl font-bold mt-5 mb-4 2xl:mb-5 text-center lg:text-left  ">
             {name}
@@ -93,7 +93,7 @@ function Earphones() {
             <p className='w-full text-center lg:text-left md:text-lg text-[#979797]'>
             {description}
             </p>
-            <button className='hover:bg-[#FBAF85] active:bg-[#D87D4A] bg-[#D87D4A] font-bold mt-8 text-gray-50 py-2.5 lg:py-4 px-8'>SEE PRODUCT</button>
+            <button className='hover:bg-[#FBAF85] active:bg-[#D87D4A] bg-[#D87D4A] font-bold mt-8 text-gray-50 py-2.5 lg:py-4 px-8 self-center lg:self-start cursor-pointer'>SEE PRODUCT</button>
 
             </div>
         </div>
@@ -115,8 +115,8 @@ function Earphones() {
             <img src={item.image} alt={item.itemName} className="absolute z-5 top-5.5 w-[15rem] md:w-[20rem] " />
             <div className='bg-[#f1f1f1] rounded-lg w-full h-[12rem] md:h-[11rem] lg:h-[15rem] mt-[8rem] flex flex-col justify-end text-center  pb-8'>
             <h2 className="text-lg font-bold uppercase">{item.itemName}</h2>
-            <Link to={`/${item.itemName.toLowerCase()}`}>
-            <button className="mt-2 text-[#979797] tracking-widest text-sm">SHOP <span className='text-[#D87D4A]'>&rarr;</span></button>
+            <Link to={`/${item.itemName.toLowerCase()}`} >
+            <button className="cursor-pointer mt-2 text-[#979797] tracking-widest text-sm self-center lg:self-start">SHOP <span className='text-[#D87D4A]'>&rarr;</span></button>
             </Link>     
             </div>
           </div>

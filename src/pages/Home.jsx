@@ -80,7 +80,7 @@ function Home() {
             <img src={item.image} alt={item.itemName} className="absolute z-5 top-5.5 w-[15rem] md:w-[20rem] " />
             <div className='bg-[#f1f1f1] rounded-lg w-full h-[12rem] md:h-[11rem] lg:h-[15rem] mt-[8rem] flex flex-col justify-end text-center  pb-8'>
             <h2 className="text-lg font-bold uppercase">{item.itemName}</h2>
-            <Link to={`/${item.itemName.toLowerCase()}`}>
+            <Link to={`/${item.itemName.toLowerCase()}`} className='cursor-pointer'>
             <button className="mt-2 text-[#979797] tracking-widest text-sm">SHOP <span className='text-[#D87D4A]'>&rarr;</span></button>
             </Link>     
             </div>
@@ -137,7 +137,7 @@ function Home() {
           <p className="text-black  text-3xl md:text-4xl 2xl:text-6xl font-bold px-4 py-2  mb-2 2xl:mb-5">
             ZX7 SPEAKER
           </p>
-          <button className='hover:bg-[#000000] hover:text-white cursor-pointer bg-transparent font-bold text-black p-2.5 2xl:py-4 2xl:px-12  md:px-8 mb-[4rem] border-2 border-black'>SEE PRODUCT</button>
+          <button className=' hover:bg-[#000000] hover:text-white active:bg-[#000000] active:text-white cursor-pointer bg-transparent font-bold text-black p-2.5 2xl:py-4 2xl:px-12  md:px-8 mb-[4rem] border-2 border-black'>SEE PRODUCT</button>
         </div>
 
         </div>
