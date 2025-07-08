@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { useParams } from 'react-router-dom';
 import productData from '../../data.json';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,13 @@ import tabletman from '../../assets/shared/tablet/image-best-gear.jpg'
 import mobileman from '../../assets/shared/mobile/image-best-gear.jpg'
 
 function Headphone_Details() {
+
+  const [quantity, setQuantity] = useState(1);
+
+  const increase = () => setQuantity(prev => prev + 1);
+  const decrease = () => {
+    if (quantity > 1) setQuantity(prev => prev - 1);
+  };
 
 
   const shop = [
@@ -46,7 +53,7 @@ function Headphone_Details() {
 
 
     <section className="cursor-default">
-          <div className="bg-black absolute top-0 object-cover -z-8 w-full h-[35%] md:h-[5%] lg:h-[15%] 2xl:h-[10%] text-white text-3xl lg:text-6xl md:text-5xl font-semibold"></div>
+          <div className="bg-black absolute top-0 object-cover -z-8 w-full  md:h-[5%] lg:h-[15%] 2xl:h-[10%] text-white text-3xl lg:text-6xl md:text-5xl font-semibold"></div>
 
       {/* Product Details Section */}
       
@@ -64,7 +71,33 @@ function Headphone_Details() {
           <div className="lg:w-1/2 lg:mt-10 2xl:mt-[10rem]">
             <h1 className="text-black text-3xl md:text-5xl uppercase font-bold mb-4">{name}</h1>
             <p className="text-[#979797] text-lg">{description}</p>
-            <p className="text-black text-lg font-bold mt-4">$ {product.price}</p>
+            <p className="text-black text-2xl font-bold mt-9">$ {product.price}</p>
+
+            <div className='flex gap-8 mt-8'>
+            <div className="flex items-center space-x-5 bg-gray-200 px-5">
+              <button
+                onClick={decrease}
+                className=" text-gray-800 hover:bg-gray-300 transition"
+              >
+                –
+              </button>
+              <span className="font-semibold">{quantity}</span>
+              <button
+                onClick={increase}
+                className=" bg-gray-200  text-gray-800 hover:bg-gray-300"
+              >
+                +
+              </button>
+            </div>
+                
+              <Link to={`/${slug}`}>
+                <button className="hover:bg-[#FBAF85] active:bg-[#D87D4A] bg-[#D87D4A] font-bold mt-4 text-gray-50 py-3 px-8 cursor-pointer">
+                   ADD TO CART
+                </button>
+              </Link>
+            </div>
+
+            
           </div>
           
         
@@ -75,7 +108,7 @@ function Headphone_Details() {
           {/* Features */}
           <div className="lg:w-1/2">
             <h2 className="text-black text-2xl font-bold mb-4">FEATURES</h2>
-            <p className="text-[#979797] text-lg">{features}</p>
+            <p className="text-[#979797] text-lg whitespace-pre-wrap ">{features}</p>
           </div>
         
 
@@ -94,7 +127,7 @@ function Headphone_Details() {
         </div>
 
 
-        <div className="flex flex-col lg:flex-row gap-8 w-full border mt-[8rem]">
+        <div className="flex flex-col lg:flex-row gap-8 w-full mt-[8rem]">
           <div className="flex flex-col gap-8">
             <picture className="w-full  ">
                 <source media="(min-width:1024px)" srcSet={gallery.first.desktop} />

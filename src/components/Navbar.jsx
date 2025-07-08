@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from '../assets/audiophile_logo.png';
 import { FaShoppingCart } from 'react-icons/fa';
+import { useLocation } from 'react-router-dom';
+
 
 import headphoneThumbnail from '../assets/shared/desktop/image-category-thumbnail-headphones.png'
 import earphoneThumbnail from '../assets/shared/desktop/image-category-thumbnail-earphones.png'
@@ -10,6 +12,10 @@ import speakerThumbnail from '../assets/shared/desktop/image-category-thumbnail-
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
   const shop = [
     {
       itemName:'Headphones',
@@ -30,7 +36,8 @@ function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="nav text-[#FFFFFF] sm:mx-[39px] lg:mx-[165px] pt-[32px] pb-[38px] border-b-1 border-[#979797] cursor-pointer bg-transparent ">
+<nav className={`nav text-[#FFFFFF] sm:mx-[39px] lg:mx-[165px] pt-[32px] pb-[38px] border-b border-[#979797] cursor-pointer 
+  ${isHomePage ? 'bg-transparent' : 'bg-black'}`}>
       <div className="flex justify-between items-center relative ">
         <Link to="/" className="ml-[32%] md:ml-[75px] lg:mx-0">
         <img className=' ' src={logo} alt="" />
