@@ -2,6 +2,8 @@ import React,{useState} from 'react';
 import { useParams } from 'react-router-dom';
 import productData from '../../data.json';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 
 import headphoneThumbnail from '../../assets/shared/desktop/image-category-thumbnail-headphones.png'
@@ -13,6 +15,7 @@ import tabletman from '../../assets/shared/tablet/image-best-gear.jpg'
 import mobileman from '../../assets/shared/mobile/image-best-gear.jpg'
 
 function Headphone_Details() {
+  const navigate = useNavigate();
 
   const [quantity, setQuantity] = useState(1);
 
@@ -49,6 +52,34 @@ function Headphone_Details() {
 
   const { id, name, image, description, features, includes,  gallery, others } = product;
 
+
+  const addToCart = () => {
+    const existingCart = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const itemIndex = existingCart.findIndex(item => item.id === product.id);
+
+    if (itemIndex !== -1) {
+      // Update existing item quantity
+      const updatedCart = [...existingCart];
+      updatedCart[itemIndex].quantity += quantity;
+      localStorage.setItem('cartItems', JSON.stringify(updatedCart));
+    } else {
+      // Add new item
+      const newItem = {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.image, 
+        quantity: quantity
+      };
+      localStorage.setItem('cartItems', JSON.stringify([...existingCart, newItem]));
+    }
+
+    navigate('/cart');
+
+  };
+
+
+
   return (
 
 
@@ -57,7 +88,7 @@ function Headphone_Details() {
 
       {/* Product Details Section */}
       
-      <div className="px-[24px] md:px-[39px] lg:px-[165px] mt-[8rem]">
+      <div className="px-[24px] md:px-[39px] lg:px-[165px] mt-[4rem] md:mt-[8rem]">
         {/* Product Image Gallery */}
         <div className="flex flex-col lg:flex-row gap-20">
           {/* Main Image */}
@@ -68,10 +99,10 @@ function Headphone_Details() {
           </picture>
 
           
-          <div className="lg:w-1/2 lg:mt-10 2xl:mt-[10rem]">
+          <div className="lg:w-1/2 mt-[-1rem] lg:mt-10 2xl:mt-[10rem]">
             <h1 className="text-black text-3xl md:text-5xl uppercase font-bold mb-4">{name}</h1>
             <p className="text-[#979797] text-lg">{description}</p>
-            <p className="text-black text-2xl font-bold mt-9">$ {product.price}</p>
+            <p className="text-black text-2xl font-bold mt-7">$ {product.price}</p>
 
             <div className='flex gap-8 mt-8'>
             <div className="flex items-center space-x-5 bg-gray-200 px-5">
@@ -90,11 +121,9 @@ function Headphone_Details() {
               </button>
             </div>
                 
-              <Link to={`/${slug}`}>
-                <button className="hover:bg-[#FBAF85] active:bg-[#D87D4A] bg-[#D87D4A] font-bold mt-4 text-gray-50 py-3 px-8 cursor-pointer">
-                   ADD TO CART
-                </button>
-              </Link>
+            <button onClick={addToCart} className="hover:bg-[#FBAF85] active:bg-[#D87D4A] bg-[#D87D4A] font-bold  text-gray-50 py-3 px-8 cursor-pointer">
+                ADD TO CART
+            </button>
             </div>
 
             
@@ -104,7 +133,7 @@ function Headphone_Details() {
         </div>
 
         {/* Product Description and Features */}
-        <div className="flex flex-col lg:flex-row gap-20 mt-10 md:mt-[8rem]">
+        <div className="flex flex-col lg:flex-row gap-20 mt-20 md:mt-[8rem]">
           {/* Features */}
           <div className="lg:w-1/2">
             <h2 className="text-black text-2xl font-bold mb-4">FEATURES</h2>
@@ -113,7 +142,7 @@ function Headphone_Details() {
         
 
         {/* Includes */}
-        <div className="mt-10">
+        <div className="mt-[-1rem] md:mt-10">
           <h2 className="text-black text-2xl font-bold mb-4">IN THE BOX</h2>
           <ul className="grid grid-cols-1  gap-4">
             {includes.map(({ quantity, item }, index) => (
@@ -127,7 +156,7 @@ function Headphone_Details() {
         </div>
 
 
-        <div className="flex flex-col lg:flex-row gap-8 w-full mt-[8rem]">
+        <div className="flex flex-col lg:flex-row gap-8 w-full mt-[4rem] md:mt-[8rem]">
           <div className="flex flex-col gap-8">
             <picture className="w-full  ">
                 <source media="(min-width:1024px)" srcSet={gallery.first.desktop} />
